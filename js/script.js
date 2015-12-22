@@ -6,7 +6,7 @@ Array.prototype.forEach.call(photos, function(v) {
   html += '<div class="col-xs-6 col-sm-3"><a href="' + v + '" data-lightbox="photos"><img src="' + v + '"></a></div>';
 });
 
-document.querySelector('#photos .row').innerHTML = html;
+document.querySelector('[id*=photos] .row').innerHTML = html;
 
 function time(e){
   var t = Date.parse(e) - Date.now(),
@@ -20,3 +20,13 @@ function time(e){
 setInterval(function() {
   document.querySelector('.clock').innerHTML = time(weddingTime);
 }, 1000);
+
+ga('send', 'pageview', {
+ 'page': window.location.href
+});
+
+window.onhashchange = function(e) {
+  ga('send', 'pageview', {
+   'page': e.newURL
+  });
+};

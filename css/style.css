@@ -51,12 +51,12 @@ article:last-of-type, article:target {
     z-index: 10;
 }
 
-article:target ~ article#home {
+article:target ~ article[id*=home] {
     opacity: 0;
     z-index: 1;
 }
 
-article:not(#home) {
+article:not([id*=home]) {
     background: black;
     background: rgba(0,0,0,0.4);
     width: 100%;
@@ -110,27 +110,27 @@ nav p span.clock {
     text-transform: none;
 }
 
-#photos .row {
+article[id*=photos] .row {
     margin-top: 30px;
 }
 
-#photos .row div {
+article[id*=photos] .row div {
     padding-bottom: 30px;;
 }
 
-#photos .row div a {
+article[id*=photos] .row div a {
     display: block;
     position: relative;
     overflow: hidden;
 }
 
-#photos .row div a:before {
+article[id*=photos] .row div a:before {
     content: '';
     display: block;
     padding-bottom: 100%;
 }
 
-#photos .row div a img {
+article[id*=photos] .row div a img {
     max-width: 200%;
     position: absolute;
     top: -100px;
