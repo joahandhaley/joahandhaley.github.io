@@ -22,11 +22,11 @@ setInterval(function() {
 }, 1000);
 
 ga('send', 'pageview', {
- 'page': window.location.href
+ 'page': window.location.pathname + window.location.hash
 });
 
 window.onhashchange = function(e) {
   ga('send', 'pageview', {
-   'page': e.newURL
+   'page': window.location.pathname + window.location.hash
   });
 };
