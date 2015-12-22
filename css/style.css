@@ -1,0 +1,159 @@
+main {
+    background: url('/img/bg.jpg') center/cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    position: relative;
+    font-family: 'Oswald';
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 76px;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    line-height: 78px;
+}
+
+p, a {
+    color: white;
+    font-weight: 300;
+}
+
+p {
+    margin: 30px 0;
+}
+
+a:hover, a:active, a:focus {
+    color: white;
+    text-decoration: underline !important;
+}
+
+article {
+    padding: 80px 50px;
+    opacity: 0;
+    font-size: 20px;
+    transition: opacity 0.3s ease-in-out;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: auto;
+}
+
+article:last-of-type, article:target {
+    opacity: 1;
+    z-index: 10;
+}
+
+article:target ~ article#home {
+    opacity: 0;
+    z-index: 1;
+}
+
+article:not(#home) {
+    background: black;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    max-width: 700px;
+    min-height: 100vh;
+}
+
+article header {
+    margin-bottom: -100px;
+}
+
+article header .logo-wrapper {
+    width: 450px;
+    display: inline-block;
+}
+
+a.back {
+    font-size: 22px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 100;
+}
+
+a.back:before {
+    content: url('/img/back.svg');
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+nav .nav {
+    margin: 0;
+}
+
+nav li a, nav p {
+    background: none !important;
+    color: white;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 0 !important;
+    display: inline-block !important;
+}
+
+nav p span {
+    display: block;
+    font-size: 28px;
+}
+
+nav p span.clock {
+    font-size: 32px;
+    text-transform: none;
+}
+
+#photos .row {
+    margin-top: 30px;
+}
+
+#photos .row div {
+    padding-bottom: 30px;;
+}
+
+#photos .row div a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+#photos .row div a:before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+#photos .row div a img {
+    max-width: 200%;
+    position: absolute;
+    top: -100px;
+    bottom: -100px;
+    right: -100px;
+    left: -100px;
+    margin: auto;
+}
+
+@media (max-width: 991px) {
+    main {
+        background-position-y: bottom;
+        background-position-x: calc(100vw + 150px);
+    }
+}
+
+@media (max-width: 620px) {
+    article header {
+        max-width: 100%;
+        margin-bottom: -20%;
+    }
+
+    article header .logo-wrapper {
+        max-width: 100%;
+    }
+}
