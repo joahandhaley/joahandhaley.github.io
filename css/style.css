@@ -66,6 +66,7 @@ article:not([id*=home]) {
 
 article header {
     margin-bottom: -100px;
+    display: none;
 }
 
 article header .logo-wrapper {
