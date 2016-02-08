@@ -4,6 +4,7 @@
     <link href='//fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+    <link rel="stylesheet" href="/css/venobox.css">
     <link rel="stylesheet" href="/css/style.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,6 +36,12 @@
           Target: <a href="http://www.target.com/gift-registry/registry/Ikk39NiVu8ZcMySyXS_APg?lnk=copiedLink">Registry Link</a><br>
           Amazon: <a href="https://www.amazon.com/registry/wedding/33XN124ZND0T8">Registry Link</a>
         </p>
+      </article>
+      <article id="/livestream">
+        <a href="#" class="back">Back to Home</a>
+        <h1>Livestream</h1>
+        <p>Watch Joah and Haley's wedding from anywhere! Visit this page at 11:00am on March 12 to join in.</p>
+        <a class="venobox" data-type="youtube" href="http://youtu.be/vor8KIuqlP4"><img alt="click here for the livestream" src="/img/livestream.jpg"></a>
       </article>
       <article id="/home">
         <header>
@@ -470,6 +477,9 @@
             <li>
               <a href="#/registry">Registry</a>
             </li>
+            <li>
+              <a href="#/livestream">Livestream</a>
+            </li>
           </ul>
 
           <p>
@@ -491,5 +501,12 @@
     <script src="/js/script.js"></script>
     <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+    <script src="/js/venobox.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.venobox').venobox(); 
+      });
+    </script>
   </body>
 </html>

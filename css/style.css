@@ -140,6 +140,10 @@ article[id*=photos] .row div a img {
     margin: auto;
 }
 
+.venobox img {
+    max-width: 100%;
+}
+
 @media (max-width: 620px) {
     article header {
         max-width: 100%;
