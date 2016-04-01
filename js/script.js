@@ -17,9 +17,9 @@ function time(e){
   return d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
 }
 
-setInterval(function() {
+/*setInterval(function() {
   document.querySelector('.clock').innerHTML = time(weddingTime);
-}, 1000);
+}, 1000);*/
 
 ga('send', 'pageview', {
  'page': window.location.pathname + window.location.hash
